@@ -3,9 +3,10 @@
     // Meta data for display purposes
     "meta": {
         // label: name of the recipe as displayed, should be short
-        "label": "V1 pca components",
+        "label": "PCA components",
         // description: longer string to help end users understand what this recipe does
-        "description": "",
+        "description": "Compute the eigen vectors, the eigen variance and the eigen variance ratio"
+",
         // icon: must be one of the FontAwesome 3.2.1 icons, complete list here at https://fontawesome.com/v3.2.1/icons/
         "icon": "icon-puzzle-piece"
     },
@@ -13,33 +14,15 @@
     "kind": "PYTHON",
     
 
-    // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
-    // or more dataset to each input and output role.
-
-    // The "arity" field indicates whether the user can associate several datasets to the role ('NARY')
-    // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
-    // associate no dataset with the role.
-
     "inputRoles": [
         {
-            "name": "input_A_role",
+            "name": "data_floats",
             "label": "input A displayed name",
             "description": "what input A means",
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": true
-        },
-        {
-            "name": "input_B_role",
-            "label": "input B displayed name",
-            "description": "what input B means",
-            "arity": "NARY",
-            "required": false,
-            "acceptsDataset": true
-            // ,'mustBeSQL': true
-            // ,'mustBeStrictlyType':'HDFS'
         }
-        // ...
     ],
 
     "outputRoles": [
