@@ -22,12 +22,12 @@ from dataiku.customrecipe import get_recipe_config
 # Roles need to be defined in recipe.json, in the inputRoles and outputRoles fields.
 
 # To  retrieve the datasets of an input role named 'input_A' as an array of dataset names:
-input_A_names = get_input_names_for_role('input_A_role')
+input_A_names = get_input_names_for_role('input_dataset')
 # The dataset objects themselves can then be created like this:
 input_A_datasets = [dataiku.Dataset(name) for name in input_A_names]
 
 # For outputs, the process is the same:
-output_A_names = get_output_names_for_role('main_output')
+output_A_names = get_output_names_for_role('out_dataset')
 output_A_datasets = [dataiku.Dataset(name) for name in output_A_names]
 
 
