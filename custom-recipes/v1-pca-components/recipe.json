@@ -16,7 +16,7 @@
 
     "inputRoles": [
         {
-            "name": "data_floats",
+            "name": "input_dataset",
             "label": "input A displayed name",
             "description": "what input A means",
             "arity": "UNARY",
