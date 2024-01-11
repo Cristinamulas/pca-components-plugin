@@ -19,7 +19,7 @@
             "name": "input_dataset",
             "label": "input A displayed name",
             "description": "the dataset that you want to compute the PCA components",
-            "arity": "UNARY",
+            "arity": "NARY",
             "required": true,
             "acceptsDataset": true
         }
@@ -31,7 +31,7 @@
             "label": "main output displayed name",
             "description": "A dataset with the PCA components calculated",
             "arity": "UNARY",
-            "required": false,
+            "required": true,
             "acceptsDataset": true
         }
     ],
