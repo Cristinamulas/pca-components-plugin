@@ -6,7 +6,7 @@
         "label": "PCA components",
         // description: longer string to help end users understand what this recipe does
         "description": "Compute the eigen vectors, the eigen variance and the eigen variance ratio"
-",
+,
         // icon: must be one of the FontAwesome 3.2.1 icons, complete list here at https://fontawesome.com/v3.2.1/icons/
         "icon": "icon-puzzle-piece"
     },
