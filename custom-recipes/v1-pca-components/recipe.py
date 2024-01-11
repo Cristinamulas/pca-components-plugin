@@ -23,8 +23,10 @@ from dataiku.customrecipe import get_recipe_config
 
 # To  retrieve the datasets of an input role named 'input_A' as an array of dataset names:
 input_A_names = get_input_names_for_role('input_dataset')
+print('NNNNN input_A_names')
 # The dataset objects themselves can then be created like this:
 input_A_datasets = [dataiku.Dataset(name) for name in input_A_names]
+print(" SSSSS input_A_datasets")
 
 # For outputs, the process is the same:
 output_A_names = get_output_names_for_role('out_dataset')
