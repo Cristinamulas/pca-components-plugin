@@ -23,32 +23,15 @@ from dataiku.customrecipe import get_recipe_config
 
 # To  retrieve the datasets of an input role named 'input_A' as an array of dataset names:
 input_A_names = get_input_names_for_role('input_dataset')
-print('NNNNN input_A_names')
 # The dataset objects themselves can then be created like this:
 input_A_datasets = [dataiku.Dataset(name) for name in input_A_names]
-print(" SSSSS input_A_datasets")
 
 # For outputs, the process is the same:
 output_A_names = get_output_names_for_role('out_dataset')
 output_A_datasets = [dataiku.Dataset(name) for name in output_A_names]
 
-
-# The configuration consists of the parameters set up by the user in the recipe Settings tab.
-
-# Parameters must be added to the recipe.json file so that DSS can prompt the user for values in
-# the Settings tab of the recipe. The field "params" holds a list of all the params for wich the
-# user will be prompted for values.
-
-# The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
-my_variable = get_recipe_config()['parameter_name']
-
-# For optional parameters, you should provide a default value in case the parameter is not present:
-my_variable = get_recipe_config().get('parameter_name', None)
-
-# Note about typing:
-# The configuration of the recipe is passed through a JSON object
-# As such, INT parameters of the recipe are received in the get_recipe_config() dict as a Python float.
-# If you absolutely require a Python int, use int(get_recipe_config()["my_int_param"])
+ The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
+n_componennts_pca = get_recipe_config()['number_of_components']
 
 
 #############################
@@ -88,7 +71,7 @@ df_normalized=(df_floats - df_floats.mean()) / df_floats.std()
 # principal=PCA(n_components=3)
 # principal.fit(df_normalized)
 # x=principal.transform(df_normalized)
-pca = PCA(n_components=3)
+pca = PCA(n_components=n_componennts_pca)
 x = pca.fit(df_normalized)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE

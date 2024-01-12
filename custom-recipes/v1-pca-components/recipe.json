@@ -15,11 +15,12 @@
     
 
     "inputRoles": [
-        {
-            "name": "input_dataset",
-            "label": "input A displayed name",
-            "description": "the dataset that you want to compute the PCA components",
-            "arity": "NARY",
+       
+          {
+            "name": "input",
+            "label": "dataset used for a PCA Analysis",
+            "description": "Input Dataset",
+            "arity": "UNARY",
             "required": true,
             "acceptsDataset": true
         }
@@ -27,9 +28,9 @@
 
     "outputRoles": [
         {
-            "name": "out_dataset",
-            "label": "main output displayed name",
-            "description": "A dataset with the PCA components calculated",
+            "name": "output",
+            "label": "dataset with the PCA Analysis",
+            "description": "Output dataset",
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": true
