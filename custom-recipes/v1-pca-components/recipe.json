@@ -47,8 +47,8 @@
 
     "params": [
         {
-            "name": "number of components",
-            "label": "User-readable label",
+            "name": "number_of_components",
+            "label": "Number of Components",
             "type": "INT",
             "description": "number of componets in the PCA",
             "mandatory": true
