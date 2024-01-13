@@ -66,7 +66,7 @@ x = pca.fit(df_normalized)
 PCnames = ['PC'+str(i+1) for i in range(pca.n_components_)]
 eigen_vectors = pd.DataFrame(pca.components_.T,columns=PCnames)
 # eigen_vectors['Columns'] = df_floats.columns
-print(eigen_vectors)
+# print(eigen_vectors)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 eigen_variance = pd.DataFrame(pca.explained_variance_,columns=["Variance"],index=PCnames)
@@ -77,7 +77,7 @@ eigen_variance_ratio = pd.DataFrame(pca.explained_variance_ratio_,columns=["Vari
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 frame_combined = pd.concat([eigen_variance, eigen_variance_ratio],axis=1)
 frame_combined['PCA Components'] = PCnames
-print(frame_combined)
+# print(frame_combined)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 
