@@ -45,16 +45,6 @@ output_variance_datasets = [dataiku.Dataset(name) for name in output_variance_na
 n_components = get_recipe_config()['number of components']
 
 
-# Note about typing:
-# The configuration of the recipe is passed through a JSON object
-# As such, INT parameters of the recipe are received in the get_recipe_config() dict as a Python float.
-# If you absolutely require a Python int, use int(get_recipe_config()["my_int_param"])
-
-
-#############################
-# Your original recipe
-#############################
-
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 import dataiku
 import pandas as pd, numpy as np
@@ -96,9 +86,9 @@ frame_combined['PCA Components'] = PCnames
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 
 # Write recipe outputs
-eigen_vectors_final = dataiku.Dataset("eigen_vectors")
+eigen_vectors_final = dataiku.Dataset("output_eigen_vectors_datasets")
 eigen_vectors_final.write_from_dataframe(eigen_vectors)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-eigen_variance = dataiku.Dataset("eigen_variance")
+eigen_variance = dataiku.Dataset("output_variance_datasets")
 eigen_variance.write_with_schema(frame_combined)
