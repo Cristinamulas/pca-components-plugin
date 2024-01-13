@@ -81,12 +81,12 @@ frame_combined['PCA Components'] = PCnames
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 
 # Write recipe outputs
-output_eigen_vectors_final = get_output_names_for_role('output_eigen_vectors')[0]
+output_eigen_vectors_final = get_output_names_for_role('output_eigen_vectors')
 print(" SSSSS output_eigen_vectors_final ")
 output_dataset_final_vectors = dataiku.Dataset(output_eigen_vectors_final)
 output_dataset_final_vectors.write_with_schema(eigen_vectors)
 
 # Write recipe outputs
-eigen_variance_ratio_final = get_output_names_for_role('output_eigen_variance')[0]
+eigen_variance_ratio_final = get_output_names_for_role('output_eigen_variance')
 output_dataset_variance_final = dataiku.Dataset(eigen_variance_ratio_final)
 output_dataset_variance_final.write_with_schema(frame_combined)
