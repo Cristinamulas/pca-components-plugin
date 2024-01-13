@@ -16,6 +16,14 @@ import dataiku
 from dataiku.customrecipe import get_input_names_for_role
 from dataiku.customrecipe import get_output_names_for_role
 from dataiku.customrecipe import get_recipe_config
+import dataiku
+import pandas as pd, numpy as np
+from dataiku import pandasutils as pdu
+
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
+
+
 
 # Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
 # or more dataset to each input and output role.
@@ -44,14 +52,6 @@ dataset_pca_df = input_dataset.get_dataframe()
 # The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
 n_components = get_recipe_config()['number of components']
 
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-import dataiku
-import pandas as pd, numpy as np
-from dataiku import pandasutils as pdu
-
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
 
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
