@@ -34,7 +34,7 @@
     "outputRoles" : [
     
         {
-            "name": "output eigen vectors",
+            "name": "output_eigen_vectors",
             "label": "dataset eigen vectors",
             "description": "Output Dataset",
             "arity": "UNARY",
@@ -44,7 +44,7 @@
     
      
         {
-            "name": "output eigen variance ",
+            "name": "output_eigen_variance ",
             "label": "dataset with eigen_variance and eigen_variance ratio",
             "description": "Output Dataset",
             "arity": "UNARY",
