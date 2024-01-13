@@ -35,7 +35,7 @@
     
         {
             "name": "output eigen vectors",
-            "label": "dataset eigen_vectors",
+            "label": "dataset eigen vectors",
             "description": "Output Dataset",
             "arity": "UNARY",
             "required": true,
