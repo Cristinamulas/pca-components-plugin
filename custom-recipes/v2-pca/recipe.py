@@ -42,7 +42,7 @@ output_variance_datasets = [dataiku.Dataset(name) for name in output_variance_na
 # user will be prompted for values.
 
 # The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
-my_variable = get_recipe_config()['number of components']
+n_components = get_recipe_config()['number of components']
 
 
 # Note about typing:
@@ -71,7 +71,7 @@ df_floats = dataset_pca_df.select_dtypes(np.float64)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_normalized=(df_floats - df_floats.mean()) / df_floats.std()
-pca = PCA(n_components=3)
+pca = PCA(n_components=n_components)
 x = pca.fit(df_normalized)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
