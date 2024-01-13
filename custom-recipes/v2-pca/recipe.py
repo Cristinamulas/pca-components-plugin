@@ -24,7 +24,7 @@ from dataiku.customrecipe import get_recipe_config
 # To  retrieve the datasets of an input role named 'input_A' as an array of dataset names:
 input_A_names = get_input_names_for_role('input')
 # The dataset objects themselves can then be created like this:
-input_A_datasets = [dataiku.Dataset(name) for name in input_A_names]
+input_datasets = [dataiku.Dataset(name) for name in input_A_names]
 
 # For outputs, the process is the same:
 output_eigen_vectors = get_output_names_for_role('output eigen vectors')
@@ -63,6 +63,10 @@ from dataiku import pandasutils as pdu
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 # # Read recipe inputs
+# Read the input
+input_dataset = input_datasets[0]
+df = input_dataset.get_dataframe()
+
 dataset_pca = dataiku.Dataset("input_A_datasets")
 dataset_pca_df = dataset_pca.get_dataframe()
 print(dataset_pca_df)
