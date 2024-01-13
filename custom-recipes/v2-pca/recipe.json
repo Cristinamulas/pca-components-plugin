@@ -44,7 +44,7 @@
     
      
         {
-            "name": "output_eigen_variance ",
+            "name": "output_eigen_variance",
             "label": "dataset with eigen_variance and eigen_variance ratio",
             "description": "Output Dataset",
             "arity": "UNARY",
