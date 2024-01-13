@@ -82,7 +82,7 @@ frame_combined['PCA Components'] = PCnames
 
 # Write recipe outputs
 output_eigen_vectors_final = get_output_names_for_role('output_eigen_vectors')
-print(" SSSSS " output_dataset_variance_final)
+print(output_dataset_variance_final)
 output_dataset_final_vectors = dataiku.Dataset(output_eigen_vectors_final)
 output_dataset_final_vectors.write_with_schema(eigen_vectors)
 
