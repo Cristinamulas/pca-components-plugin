@@ -20,48 +20,38 @@
     // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
     // associate no dataset with the role.
 
-    "inputRoles": [
+     "inputRoles" : [
         {
-            "name": "input_A_role",
-            "label": "input A displayed name",
-            "description": "what input A means",
+            "name": "input",
+            "label": " PCA dataset",
+            "description": "Input Dataset",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+],
+
+"outputRoles" : [
+    
+        {
+            "name": "output eigen vectors",
+            "label": "dataset eigen_vectors",
+            "description": "Output Dataset",
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": true
         },
+    
+     
         {
-            "name": "input_B_role",
-            "label": "input B displayed name",
-            "description": "what input B means",
-            "arity": "NARY",
-            "required": false,
-            "acceptsDataset": true
-            // ,'mustBeSQL': true
-            // ,'mustBeStrictlyType':'HDFS'
-        }
-        // ...
-    ],
-
-    "outputRoles": [
-        {
-            "name": "main_output",
-            "label": "main output displayed name",
-            "description": "what main output means",
+            "name": "output eigen_variance ",
+            "label": "dataset with eigen_variance and eigen_variance ratio",
+            "description": "Output Dataset",
             "arity": "UNARY",
-            "required": false,
-            "acceptsDataset": true
-        },
-        {
-            "name": "errors_output",
-            "label": "errors output displayed name",
-            "description": "what errors output means",
-            "arity": "UNARY",
-            "required": false,
+            "required": true,
             "acceptsDataset": true
         }
-        // ...
-    ],
-
+],
     /* The field "params" holds a list of all the params
        for wich the user will be prompted for values in the Settings tab of the recipe.
 
