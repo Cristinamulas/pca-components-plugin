@@ -44,8 +44,6 @@ output_variance_datasets = [dataiku.Dataset(name) for name in output_variance_na
 # The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
 my_variable = get_recipe_config()['parameter_name']
 
-# For optional parameters, you should provide a default value in case the parameter is not present:
-my_variable = get_recipe_config().get('parameter_name', None)
 
 # Note about typing:
 # The configuration of the recipe is passed through a JSON object
