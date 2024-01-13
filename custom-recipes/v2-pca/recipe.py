@@ -66,7 +66,7 @@ from sklearn.preprocessing import StandardScaler
 # Read the input
 input_dataset = input_datasets[0]
 dataset_pca_df = input_dataset.get_dataframe()
-print(dataset_pca_df[0])
+# print(dataset_pca_df[0])
 
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
