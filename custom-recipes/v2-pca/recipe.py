@@ -86,9 +86,9 @@ frame_combined['PCA Components'] = PCnames
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 
 # Write recipe outputs
-eigen_vectors_final = dataiku.Dataset("output_eigen_vectors_datasets")
+eigen_vectors_final = dataiku.Dataset("xx")
 eigen_vectors_final.write_from_dataframe(eigen_vectors)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-eigen_variance = dataiku.Dataset("output_variance_datasets")
+eigen_variance = dataiku.Dataset("ee")
 eigen_variance.write_with_schema(frame_combined)
