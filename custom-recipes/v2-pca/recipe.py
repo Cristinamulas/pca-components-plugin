@@ -65,11 +65,9 @@ from sklearn.preprocessing import StandardScaler
 # # Read recipe inputs
 # Read the input
 input_dataset = input_datasets[0]
-df = input_dataset.get_dataframe()
-
-dataset_pca = dataiku.Dataset("input_A_datasets")
-dataset_pca_df = dataset_pca.get_dataframe()
+dataset_pca_df = input_dataset.get_dataframe()
 print(dataset_pca_df)
+
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_floats = dataset_pca_df.select_dtypes(np.float64)
