@@ -63,12 +63,12 @@ from dataiku import pandasutils as pdu
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 # # Read recipe inputs
-# dataset_pca = dataiku.Dataset("dataset_pca")
-# dataset_pca_df = dataset_pca.get_dataframe()
+dataset_pca = dataiku.Dataset("input_A_datasets")
+dataset_pca_df = dataset_pca.get_dataframe()
+print(dataset_pca_df)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-df_floats = input_A_datasets.select_dtypes(np.float64)
-print(df_floats)
+df_floats = dataset_pca_df.select_dtypes(np.float64)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_normalized=(df_floats - df_floats.mean()) / df_floats.std()
