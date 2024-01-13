@@ -88,6 +88,6 @@ output_dataset_final_vectors = dataiku.Dataset(output_eigen_vectors_final_name)
 output_dataset_final_vectors.write_with_schema(eigen_vectors)
 
 # Write recipe outputs
-eigen_variance_ratio_final = get_output_names_for_role('output_eigen_variance')
-output_dataset_variance_final = dataiku.Dataset(eigen_variance_ratio_final)
+eigen_variance_ratio_final_name = get_output_names_for_role('output_eigen_variance')
+output_dataset_variance_final = dataiku.Dataset(eigen_variance_ratio_final_name)
 output_dataset_variance_final.write_with_schema(frame_combined)
