@@ -34,7 +34,7 @@
     "outputRoles" : [
     
         {
-            "name": "output_eigen_vectors",
+            "name": "output1",
             "label": "dataset eigen vectors",
             "description": "Output Dataset",
             "arity": "UNARY",
