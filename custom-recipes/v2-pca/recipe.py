@@ -50,7 +50,7 @@ dataset_pca_df = input_dataset.get_dataframe()
 # user will be prompted for values.
 
 # The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
-n_components = get_recipe_config()['number of components']
+number_components = get_recipe_config()['number of components']
 
 
 
@@ -59,7 +59,7 @@ df_floats = dataset_pca_df.select_dtypes(np.float64)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_normalized=(df_floats - df_floats.mean()) / df_floats.std()
-pca = PCA(n_components=n_components)
+pca = PCA(n_components=number_components)
 x = pca.fit(df_normalized)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
