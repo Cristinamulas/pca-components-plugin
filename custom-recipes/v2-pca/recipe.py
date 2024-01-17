@@ -16,7 +16,7 @@ import dataiku
 from dataiku.customrecipe import get_input_names_for_role
 from dataiku.customrecipe import get_output_names_for_role
 from dataiku.customrecipe import get_output_names
-get_input_names
+
 from dataiku.customrecipe import get_recipe_config
 import dataiku
 import pandas as pd, numpy as np
