@@ -15,7 +15,7 @@ import dataiku
 # Import the helpers for custom recipes
 from dataiku.customrecipe import get_input_names_for_role
 from dataiku.customrecipe import get_output_names_for_role
-from dataiku.customrecipe import get_input_names
+from dataiku.customrecipe import get_output_names
 get_input_names
 from dataiku.customrecipe import get_recipe_config
 import dataiku
@@ -67,7 +67,7 @@ frame_combined['PCA Components'] = PCnames
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 
 # Write recipe outputs
-output_eigen_vectors_final_name = get_input_names('output1')
+output_eigen_vectors_final_name = get_output_names('output1')
 output_dataset_final_vectors = dataiku.Dataset(output_eigen_vectors_final_name)
 output_dataset_final_vectors.write_with_schema(eigen_vectors)
 
