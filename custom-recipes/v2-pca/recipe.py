@@ -33,7 +33,6 @@ from sklearn.preprocessing import StandardScaler
 input_dataset_name = get_input_names_for_role('input')[0]
 input_dataset = dataiku.Dataset(input_dataset_name)
 dataset_pca_df = input_dataset.get_dataframe()
-he configuration is simply a map of parameters, and retrieving the value of one of them is simply:
 number_components = get_recipe_config()['number of components']
 
 
