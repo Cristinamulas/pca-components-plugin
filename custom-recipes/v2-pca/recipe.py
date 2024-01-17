@@ -33,23 +33,7 @@ from sklearn.preprocessing import StandardScaler
 input_dataset_name = get_input_names_for_role('input')[0]
 input_dataset = dataiku.Dataset(input_dataset_name)
 dataset_pca_df = input_dataset.get_dataframe()
-
-# # For outputs, the process is the same:
-# output_eigen_vectors = get_output_names_for_role('output eigen vectors')
-# output_eigen_vectors_datasets = [dataiku.Dataset(name) for name in output_eigen_vectors]
-
-# # For outputs, the process is the same:
-# output_variance_names = get_output_names_for_role('output eigen variance')
-# output_variance_datasets = [dataiku.Dataset(name) for name in output_variance_names]
-
-
-# The configuration consists of the parameters set up by the user in the recipe Settings tab.
-
-# Parameters must be added to the recipe.json file so that DSS can prompt the user for values in
-# the Settings tab of the recipe. The field "params" holds a list of all the params for wich the
-# user will be prompted for values.
-
-# The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
+he configuration is simply a map of parameters, and retrieving the value of one of them is simply:
 number_components = get_recipe_config()['number of components']
 
 
