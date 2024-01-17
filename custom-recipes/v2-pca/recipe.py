@@ -82,7 +82,7 @@ frame_combined['PCA Components'] = PCnames
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 
 # Write recipe outputs
-output_eigen_vectors_final_name = get_output_names_for_role('output_eigen_vectors')
+output_eigen_vectors_final_name = get_output_names_for_role('PCACOMPONENTSPLUGIN.output_eigen_vectors')
 output_dataset_final_vectors = dataiku.Dataset(output_eigen_vectors_final_name, ignore_flow=True )
 output_dataset_final_vectors.write_with_schema(eigen_vectors)
 
